@@ -1,0 +1,9 @@
+<?php
+    @session_start();
+    require_once '#config';
+    
+    $userid = "#userid";
+    $twofa = "#check2fa";
+    $redirect = "#redirect";
+    include "#path";
+?>

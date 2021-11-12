@@ -1,0 +1,21 @@
+{
+    "require": {
+        "firebase/php-jwt": "^4.0",
+        "volnix/csrf": "^1.2",
+        "google/apiclient": "^2.7",
+        "palepurple/rate-limit": "^2.0",
+        "predis/predis": "^1.1",
+        "guzzlehttp/guzzle": "dev-master",
+        "restcord/restcord": "dev-develop",
+        "hbattat/verifyemail": "^1.0",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "2captcha/2captcha": "^1.0",
+        "twilio/sdk": "^6.16"
+    },
+    "config": {
+        "vendor-dir": "../vendor",
+        "platform": {
+            "php": "7.3"
+        }
+    }
+}

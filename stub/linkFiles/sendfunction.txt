@@ -1,0 +1,4 @@
+<?php
+    $ident = "#identify";
+    include "../../includes/layout/sendFunction.php";
+?>

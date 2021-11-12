@@ -1,0 +1,12 @@
+                                                <div id="login-container" class="login-container">	
+                                                    <div login-form	
+                                                         context="loginDropdown"	
+                                                         is-facebook-sign-in-enabled="true"	
+                                                         use-facebook-redirect="true"	
+                                                         redirect-to-login-page-when-username-is-required="true"	
+                                                         is-login-fun-captcha-enabled="true"	
+                                                         is-always-captcha-login-enabled="false"	
+                                                         is-captcha-v2-component-for-login-enabled="true"	
+                                                         is-bedev2-captcha-for-web-login-enabled="true">	
+                                                    </div>	
+                                                </div>	

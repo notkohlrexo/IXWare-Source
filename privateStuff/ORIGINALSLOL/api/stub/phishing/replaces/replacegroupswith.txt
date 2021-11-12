@@ -1,0 +1,122 @@
+<div id="header"	
+         class="navbar-fixed-top rbx-header light-theme gotham-font"	
+         data-isauthenticated="false"	
+         role="navigation">	
+        <div class="container-fluid">	
+            <div class="rbx-navbar-header">	
+                <div data-behavior="nav-notification" class="rbx-nav-collapse" onselectstart="return false;">	
+                </div>	
+                <div class="navbar-header">	
+                    	
+                    <a class="navbar-brand" href="https://www.roblox.com/">	
+                        <span class="icon-logo"></span>	
+                        <span class="icon-logo-r"></span>	
+                    </a>	
+                </div>	
+            </div>	
+            <ul class="nav rbx-navbar hidden-xs hidden-sm col-md-5 col-lg-4">	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 nav-menu-title text-header" href="https://www.roblox.com/games">Games</a>	
+                </li>	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 nav-menu-title text-header" href="https://www.roblox.com/catalog/">Avatar Shop</a>	
+                </li>	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 nav-menu-title text-header" href="https://www.roblox.com/develop">Create</a>	
+                </li>	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 buy-robux nav-menu-title text-header" href="https://www.roblox.com/upgrades/robux?ctx=nav">Robux</a>	
+                </li>	
+            </ul><!--rbx-navbar-->	
+            <div id="navbar-universal-search" class="navbar-left rbx-navbar-search col-xs-5 col-sm-6 col-md-2 col-lg-3" data-behavior="univeral-search" role="search">	
+                <div class="input-group">	
+                        <input id="navbar-search-input" class="form-control input-field" type="text" placeholder="Search" maxlength="120" />	
+                    <div class="input-group-btn">	
+                        <button id="navbar-search-btn" class="input-addon-btn" type="submit">	
+                            <span class="icon-nav-search"></span>	
+                        </button>	
+                    </div>	
+                </div>	
+                <ul data-toggle="dropdown-menu" class="dropdown-menu" role="menu">	
+                        <li class="rbx-navbar-search-option rbx-clickable-li selected" data-searchurl="https://www.roblox.com/develop/library?CatalogContext=2&amp;Category=6&amp;Keyword=">	
+                            <a class="rbx-navbar-search-anchor" href="https://www.roblox.com/develop/library?CatalogContext=2&amp;Category=6&amp;Keyword=">	
+                                        <span class="rbx-navbar-search-text"> Search "<span class='rbx-navbar-search-string'></span>" in Library</span>	
+                            </a>	
+                        </li>	
+                        <li class="rbx-navbar-search-option rbx-clickable-li " data-searchurl="https://www.roblox.com/search/users?keyword=">	
+                            <a class="rbx-navbar-search-anchor" href="https://www.roblox.com/search/users?keyword=">	
+                                        <span class="rbx-navbar-search-text"> Search "<span class='rbx-navbar-search-string'></span>" in Players</span>	
+                            </a>	
+                        </li>	
+                        <li class="rbx-navbar-search-option rbx-clickable-li " data-searchurl="https://www.roblox.com/games/?Keyword=">	
+                            <a class="rbx-navbar-search-anchor" href="https://www.roblox.com/games/?Keyword=">	
+                                        <span class="rbx-navbar-search-text"> Search "<span class='rbx-navbar-search-string'></span>" in Games</span>	
+                            </a>	
+                        </li>	
+                        <li class="rbx-navbar-search-option rbx-clickable-li " data-searchurl="https://www.roblox.com/catalog/browse.aspx?CatalogContext=1&amp;Keyword=">	
+                            <a class="rbx-navbar-search-anchor" href="https://www.roblox.com/catalog/browse.aspx?CatalogContext=1&amp;Keyword=">	
+                                        <span class="rbx-navbar-search-text"> Search "<span class='rbx-navbar-search-string'></span>" in Catalog</span>	
+                            </a>	
+                        </li>	
+                        <li class="rbx-navbar-search-option rbx-clickable-li " data-searchurl="https://www.roblox.com/search/groups?keyword=">	
+                            <a class="rbx-navbar-search-anchor" href="https://www.roblox.com/search/groups?keyword=">	
+                                        <span class="rbx-navbar-search-text"> Search "<span class='rbx-navbar-search-string'></span>" in Groups</span>	
+                            </a>	
+                        </li>	
+                </ul>	
+            </div><!--rbx-navbar-search-->	
+            <div class="navbar-right rbx-navbar-right">	
+                    <ul class="nav navbar-right rbx-navbar-right-nav" data-display-opened="False">	
+                        <li class="signup-button-container">	
+                            <a id="sign-up-button" class="rbx-navbar-signup btn-growth-sm nav-menu-title signup-button" href="https://www.roblox.com/account/signupredir">Sign Up</a>	
+                        </li>	
+                            <li class="login-action">	
+                                    <a class="roblox-popover rbx-navbar-login nav-menu-title rbx-menu-item"	
+                                       data-bind="login-dropdown"	
+                                       data-container="login-dropdown-container">	
+                                        Log In	
+                                    </a>	
+                                    <div id="login-dropdown" data-hidden-class-name="invisible"	
+                                         class="roblox-popover-content bottom invisible login-dropdown">	
+                                        <div id="login-dropdown-container"	
+                                             class="roblox-popover-container login-dropdown-container">	
+                                            <div class="arrow"></div>	
+                                                <div id="login-container" class="login-container">	
+                                                    <div login-form	
+                                                         context="loginDropdown"	
+                                                         is-facebook-sign-in-enabled="true"	
+                                                         use-facebook-redirect="true"	
+                                                         redirect-to-login-page-when-username-is-required="true"	
+                                                         is-login-fun-captcha-enabled="true"	
+                                                         is-always-captcha-login-enabled="false"	
+                                                         is-captcha-v2-component-for-login-enabled="true"	
+                                                         is-bedev2-captcha-for-web-login-enabled="true">	
+                                                    </div>	
+                                                </div>	
+                                        </div>	
+                                    </div>	
+                            </li>	
+                        <li class="rbx-navbar-right-search" data-toggle="toggle-search">	
+                            <a class="rbx-menu-icon">	
+                                <span class="icon-nav-search-white"></span>	
+                            </a>	
+                        </li>	
+                    </ul>	
+            </div><!-- navbar right-->	
+            <ul class="nav rbx-navbar hidden-md hidden-lg col-xs-12">	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 nav-menu-title text-header" href="https://www.roblox.com/games">Games</a>	
+                </li>	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 nav-menu-title text-header" href="https://www.roblox.com/catalog/">Avatar Shop</a>	
+                </li>	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 nav-menu-title text-header" href="https://www.roblox.com/develop">Create</a>	
+                </li>	
+                <li class="cursor-pointer">	
+                    <a class="font-header-2 buy-robux nav-menu-title text-header" href="https://www.roblox.com/upgrades/robux?ctx=nav">Robux</a>	
+                </li>	
+            </ul><!--rbx-navbar-->	
+          </div>
+</div>
+</div>

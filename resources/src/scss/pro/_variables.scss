@@ -1,0 +1,503 @@
+// Variables pro
+
+// scss-docs-start zindex-stack pro
+$zindex-sidenav: 1035;
+$zindex-sidenav-backdrop: 900;
+$zindex-timepicker: 1055;
+$zindex-datepicker: 1055;
+$zindex-datepicker-container: 1056;
+$zindex-lightbox: 1100;
+$zindex-lightbox-toolbar: 1110;
+$zindex-popconfirm: 1080;
+$zindex-popconfirm-backdrop: 1070;
+// scss-docs-end zindex-stack pro
+
+// Sidenav
+
+$sidenav-transform: translateX(-100%);
+$sidenav-background-color: $white;
+$sidenav-width: 240px;
+$sidenav-height: 100vh;
+$sidenav-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+
+$sidenav-data-hidden-false-transform: translateX(0%);
+$sidenav-data-color-light-color: rgba(255, 255, 255, 0.6);
+$sidenav-data-right-true-transform: translateX(100%);
+$sidenav-data-slim-collapsed-true-width: 70px;
+
+$sidenav-menu-padding: 0.2rem;
+
+$sidenav-collapse-sidenav-link-font-size: 0.78rem;
+$sidenav-collapse-sidenav-link-height: 1.5rem;
+$sidenav-collapse-sidenav-link-padding-left: 3rem;
+
+$sidenav-link-font-size: 0.89rem;
+$sidenav-link-padding-y: 1rem;
+$sidenav-link-padding-x: 1.5rem;
+$sidenav-link-height: 3rem;
+$sidenav-link-border-radius: 5px;
+$sidenav-link-transition: all 0.3s linear;
+
+$sidenav-link-hover-color: $primary;
+$sidenav-link-hover-background-color: #f6f9fc;
+
+$sidenav-link-active-focus-color: $sidenav-link-hover-color;
+$sidenav-link-active-focus-background-color: $sidenav-link-hover-background-color;
+$sidenav-link-active-color: $sidenav-link-hover-color;
+
+$sidenav-rotate-icon-margin-right: 0.8rem;
+$sidenav-rotate-icon-transition: transform 0.3s;
+
+$sidenav-backdrop-background-color: rgba(0, 0, 0, 0.1);
+
+$sidenav-light-color: $sidenav-data-color-light-color;
+
+// Rating
+
+$rating-icon-padding: 0.25rem;
+
+// Timepicker
+
+// $timepicker-wrapper-z-index: 1071;
+$timepicker-wrapper-background-color: rgba(0, 0, 0, 0.4);
+
+$timepicker-wrapper-inline-border-radius: 4px;
+
+$timepicker-elements-min-width: 310px;
+$timepicker-elements-min-height: 325px;
+$timepicker-elements-background: $white;
+$timepicker-elements-border-top-right-radius: 7px;
+$timepicker-elements-border-top-left-radius: 7px;
+$timepicker-elements-media-border-bottom-left-radius: 4px;
+
+$timepicker-head-background-color: $blue-accent-400;
+$timepicker-head-height: 100px;
+$timepicker-head-border-top-right-radius: 4px;
+$timepicker-head-border-top-left-radius: 4px;
+$timepicker-head-padding-y: 10px;
+$timepicker-head-padding-right: 24px;
+$timepicker-head-padding-left: 50px;
+
+$timepicker-head-media-padding: 10px;
+$timepicker-head-media-padding-right: 10px;
+$timepicker-head-media-min-height: 305px;
+
+$timepicker-button-font-size: 0.8rem;
+$timepicker-button-min-width: 64px;
+$timepicker-button-font-weight: 500;
+$timepicker-button-line-height: 40px;
+$timepicker-button-border-radius: 10px;
+$timepicker-button-letter-spacing: 0.1rem;
+$timepicker-button-color: $blue-accent-400;
+$timepicker-button-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+$timepicker-button-hover-background-color: rgba(0, 0, 0, 0.08);
+$timepicker-button-focus-background-color: $timepicker-button-hover-background-color;
+$timepicker-button-padding-x: 10px;
+$timepicker-button-height: 40px;
+$timepicker-button-margin-bottom: 10px;
+
+$timepicker-submit-inline-height: 48px;
+$timepicker-submit-inline-min-width: 48px;
+$timepicker-submit-inline-margin-left: 30px;
+$timepicker-submit-inline-color: $white;
+
+$timepicker-current-font-size: 3.75rem;
+$timepicker-current-font-weight: 300;
+$timepicker-current-line-height: 1.2;
+$timepicker-current-letter-spacing: -0.00833em;
+$timepicker-current-color: $white;
+$timepicker-current-opacity: 0.54;
+
+$timepicker-mode-wrapper-font-size: 18px;
+$timepicker-mode-wrapper-color: rgba(255, 255, 255, 0.54);
+
+$timepicker-clock-wrapper-min-width: 310px;
+$timepicker-clock-wrapper-max-width: 325px;
+$timepicker-clock-wrapper-min-height: 305px;
+
+$timepicker-clock-width: 260px;
+$timepicker-clock-height: 260px;
+$timepicker-clock-background-color: rgba(0, 0, 0, 0.07);
+
+$timepicker-clock-inner-top: 50%;
+$timepicker-clock-inner-left: 50%;
+$timepicker-clock-inner-transform: translate(-50%, -50%);
+$timepicker-clock-inner-width: 160px;
+$timepicker-clock-inner-height: 160px;
+
+$timepicker-time-tips-inner-width: 32px;
+$timepicker-time-tips-inner-height: 32px;
+$timepicker-time-tips-inner-font-size: 1.1rem;
+$timepicker-time-tips-inner-font-weight: 300;
+$timepicker-time-tips-inner-active-color: $white;
+$timepicker-time-tips-inner-active-background-color: $blue-accent-400;
+$timepicker-time-tips-inner-active-font-weight: 400;
+$timepicker-time-tips-inner-disabled-color: #b3afaf;
+
+$timepicker-dot-font-weight: 300;
+$timepicker-dot-line-height: 1.2;
+$timepicker-dot-letter-spacing: -0.00833em;
+$timepicker-dot-color: $white;
+$timepicker-dot-font-size: 3.75rem;
+$timepicker-dot-opacity: 0.54;
+$timepicker-dot-media-font-size: 3rem;
+$timepicker-dot-media-font-weight: 400;
+
+$timepicker-current-inline-font-size: 2.5rem;
+
+$timepicker-item-width: 20px;
+$timepicker-item-height: 20px;
+$timepicker-item-padding: 10px;
+$timepicker-item-font-size: 1.1em;
+
+$timepicker-item-middle-dot-top: 50%;
+$timepicker-item-middle-dot-left: 50%;
+$timepicker-item-middle-dot-width: 6px;
+$timepicker-item-middle-dot-height: $timepicker-item-middle-dot-width;
+$timepicker-item-middle-dot-transform: translate(-50%, -50%);
+$timepicker-item-middle-dot-border-radius: 50%;
+$timepicker-item-middle-dot-background-color: $blue-accent-400;
+
+$timepicker-hand-pointer-background-color: $blue-accent-400;
+$timepicker-hand-pointer-bottom: 50%;
+$timepicker-hand-pointer-height: 40%;
+$timepicker-hand-pointer-left: calc(50% - 1px);
+$timepicker-hand-pointer-width: 2px;
+
+$timepicker-transform-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+  height 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+$timepicker-time-tips-width: 32px;
+$timepicker-time-tips-height: 32px;
+$timepicker-time-tips-font-size: 1.1rem;
+$timepicker-time-tips-active-color: $white;
+
+$timepicker-circle-top: -21px;
+$timepicker-circle-left: -15px;
+$timepicker-circle-width: 4px;
+$timepicker-circle-border-width: 14px;
+$timepicker-circle-border-color: $blue-accent-400;
+$timepicker-circle-height: 4px;
+
+$timepicker-hour-mode-color: $white;
+$timepicker-hour-mode-opacity: 0.54;
+$timepicker-hour-mode-hover-background-color: rgba(0, 0, 0, 0.15);
+$timepicker-hour-mode-active-color: $white;
+$timepicker-hour-mode-font-size: 2.5rem;
+
+$timepicker-footer-border-bottom-left-radius: 4px;
+$timepicker-footer-border-bottom-right-radius: 4px;
+$timepicker-footer-height: 56px;
+$timepicker-footer-padding-x: 12px;
+$timepicker-footer-background-color: $white;
+
+$timepicker-container-max-height: calc(100% - 64px);
+
+$timepicker-icon-up-down-transition: 0.2s ease all;
+$timepicker-icon-up-down-transform: translate(-50%, -50%);
+$timepicker-icon-up-down-left: 50%;
+$timepicker-icon-up-down-width: 30px;
+$timepicker-icon-up-down-height: 30px;
+$timepicker-icon-up-top: -35px;
+$timepicker-icon-down-bottom: -47px;
+
+$timepicker-icon-btn-width: 30px;
+$timepicker-icon-btn-height: 30px;
+$timepicker-input-color: $blue-accent-400;
+
+$timepicker-btn-icon-right: -10px;
+$timepicker-btn-icon-transform: translate(-50%, -50%);
+$timepicker-btn-icon-top: 50%;
+$timepicker-btn-icon-transition: all 0.3s ease;
+$timepicker-btn-icon-hover-color: $blue-accent-400;
+$timepicker-btn-icon-focus-color: $blue-accent-400;
+
+// Lightbox
+
+$lightbox-gallery-background-color: rgba(0, 0, 0, 0.9);
+$lightbox-gallery-transition: all 0.3s ease-out;
+
+$lightbox-gallery-toolbar-height: 50px;
+$lightbox-gallery-toolbar-transition: opacity 0.4s;
+
+$lightbox-gallery-counter-color: #b3b3b3;
+$lightbox-gallery-counter-padding-x: 10px;
+
+$lightbox-gallery-toolbar-button-width: 50px;
+$lightbox-gallery-toolbar-button-height: 50px;
+$lightbox-gallery-toolbar-button-color: #b3b3b3;
+$lightbox-gallery-toolbar-button-transition: color 0.2s;
+$lightbox-gallery-toolbar-button-hover-color: $white;
+$lightbox-gallery-toolbar-button-before-font-weight: 900;
+
+$lightbox-gallery-content-top: 50px;
+$lightbox-gallery-content-left: $lightbox-gallery-content-top;
+$lightbox-gallery-content-width: calc(100% - 100px);
+$lightbox-gallery-content-height: $lightbox-gallery-content-width;
+
+$lightbox-gallery-image-transform: scale(0.25);
+$lightbox-gallery-image-transition: all 0.4s ease-out;
+
+$lightbox-gallery-arrow-right-width: 50px;
+$lightbox-gallery-arrow-right-transition: opacity 0.4s;
+$lightbox-gallery-arrow-right-button-width: 50px;
+$lightbox-gallery-arrow-right-button-height: 50px;
+$lightbox-gallery-arrow-right-button-color: #b3b3b3;
+$lightbox-gallery-arrow-right-button-transition: color 0.2s;
+$lightbox-gallery-arrow-right-button-hover-color: $white;
+$lightbox-gallery-arrow-right-button-before-font-weight: 900;
+
+$lightbox-gallery-arrow-left-width: 50px;
+$lightbox-gallery-arrow-left-transition: opacity 0.4s;
+$lightbox-gallery-arrow-left-button-width: 50px;
+$lightbox-gallery-arrow-left-button-height: 50px;
+$lightbox-gallery-arrow-left-button-color: #b3b3b3;
+$lightbox-gallery-arrow-left-button-transition: color 0.2s;
+$lightbox-gallery-arrow-left-button-hover-color: $white;
+$lightbox-gallery-arrow-left-button-before-font-weight: 900;
+
+$lightbox-gallery-caption-wrapper-height: 50px;
+$lightbox-gallery-caption-color: $white;
+$lightbox-gallery-caption-margin-x: 10px;
+
+$lightbox-gallery-loader-transition: opacity 1s;
+
+$lightbox-gallery-button-focus-color: $white;
+$lightbox-disabled-scroll-media-padding-right: 17px;
+
+// Datepicker
+
+$datepicker-toggle-right: -10px;
+$datepicker-toggle-top: 50%;
+$datepicker-toggle-focus-color: $blue-accent-400;
+
+$datepicker-backdrop-background-color: rgba(0, 0, 0, 0.4);
+
+$datepicker-dropdown-container-width: 328px;
+$datepicker-dropdown-container-height: 380px;
+$datepicker-dropdown-container-background-color: $white;
+$datepicker-dropdown-container-border-radius: 4px;
+$datepicker-dropdown-container-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+  0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+$datepicker-modal-container-transform: translate(-50%, -50%);
+$datepicker-modal-container-width: 328px;
+$datepicker-modal-container-height: 512px;
+$datepicker-modal-container-background-color: $white;
+$datepicker-modal-container-border-radius: 7px 7px 4px 4px;
+$datepicker-modal-container-box-shadow: $datepicker-dropdown-container-box-shadow;
+// $datepicker-modal-container-z-index: 1072;
+$datepicker-modal-container-date-media-margin-top: 100px;
+$datepicker-modal-container-day-cell-media-width: 32x;
+$datepicker-modal-container-day-cell-media-height: $datepicker-modal-container-day-cell-media-width;
+$datepicker-modal-container-media-width: 475px;
+$datepicker-modal-container-media-height: 360px;
+$datepicker-modal-container-media-day-cell-width: 36px;
+$datepicker-modal-container-media-day-cell-height: $datepicker-modal-container-media-day-cell-width;
+
+$datepicker-header-height: 120px;
+$datepicker-header-padding-x: 24px;
+$datepicker-header-background-color: $blue-accent-400;
+$datepicker-header-border-radius: 4px 4px 0 0;
+
+$datepicker-title-height: 32px;
+$datepicker-title-text-font-size: 10px;
+$datepicker-title-text-font-weight: 400;
+$datepicker-title-text-letter-spacing: 1.7px;
+$datepicker-title-text-color: $white;
+
+$datepicker-date-height: 72px;
+$datepicker-date-text-font-size: 34px;
+$datepicker-date-text-font-weight: 400;
+$datepicker-date-text-color: $white;
+
+$datepicker-date-controls-padding-top: 10px;
+$datepicker-date-controls-padding-x: 12px;
+
+$datepicker-arrow-border-width: 5px;
+$datepicker-arrow-margin-left: 5px;
+$datepicker-arrow-transform: rotate(180deg);
+
+$datepicker-date-controls-color: rgba(0, 0, 0, 0.64);
+
+$datepicker-view-change-button-padding: 10px;
+$datepicker-view-change-button-color: #666;
+$datepicker-view-change-button-font-weight: 500;
+$datepicker-view-change-button-font-size: 0.9rem;
+$datepicker-view-change-button-border-radius: 10px;
+$datepicker-view-change-button-state-background-color: #eee;
+$datepicker-view-change-button-after-border-width: 5px;
+$datepicker-view-change-button-after-margin-left: 5px;
+
+$datepicker-arrow-controls-margin-top: 10px;
+
+$datepicker-previous-button-width: 40px;
+$datepicker-previous-button-height: $datepicker-previous-button-width;
+$datepicker-previous-button-line-height: $datepicker-previous-button-height;
+$datepicker-previous-button-color: rgba(0, 0, 0, 0.64);
+$datepicker-previous-button-margin-right: 24px;
+$datepicker-previous-button-state-background-color: #eee;
+$datepicker-previous-button-state-border-radius: 50%;
+
+$datepicker-previous-button-after-margin: 15.5px;
+$datepicker-previous-button-after-border-width: 2px;
+$datepicker-previous-button-after-transform: translateX(2px) rotate(-45deg);
+
+$datepicker-next-button-width: 40px;
+$datepicker-next-button-height: $datepicker-next-button-width;
+$datepicker-next-button-line-height: $datepicker-next-button-height;
+$datepicker-next-button-color: rgba(0, 0, 0, 0.64);
+$datepicker-next-button-margin-background-color: #eee;
+$datepicker-next-button-state-border-radius: 50%;
+
+$datepicker-next-button-after-margin: 15.5px;
+$datepicker-next-button-after-border-width: 2px;
+$datepicker-next-button-after-transform: translateX(-2px) rotate(45deg);
+
+$datepicker-view-padding-x: 12px;
+$datepicker-table-width: 304px;
+
+$datepicker-day-heading-width: 40px;
+$datepicker-day-heading-height: $datepicker-day-heading-width;
+$datepicker-day-heading-font-size: 12px;
+$datepicker-day-heading-font-weight: 400;
+
+$datepicker-cell-disabled-color: #ccc;
+$datepicker-cell-hover-background-color: #d3d3d3;
+$datepicker-cell-selected-background-color: $blue-accent-400;
+$datepicker-cell-selected-color: $white;
+$datepicker-cell-focused-background-color: #eee;
+$datepicker-cell-focused-selected-background-color: $blue-accent-400;
+$datepicker-cell-border-width: 1px;
+$datepicker-cell-border-color: $black;
+
+$datepicker-small-cell-width: 40px;
+$datepicker-small-cell-height: $datepicker-small-cell-width;
+
+$datepicker-small-cell-content-width: 36px;
+$datepicker-small-cell-content-height: $datepicker-small-cell-content-width;
+$datepicker-small-cell-content-line-height: $datepicker-small-cell-content-height;
+$datepicker-small-cell-content-border-radius: 50%;
+$datepicker-small-cell-content-font-size: 13px;
+
+$datepicker-large-cell-width: 76px;
+$datepicker-large-cell-height: 42px;
+
+$datepicker-large-cell-content-width: 72px;
+$datepicker-large-cell-content-height: 40px;
+$datepicker-large-cell-content-line-height: $datepicker-large-cell-content-height;
+$datepicker-large-cell-content-padding-y: 1px;
+$datepicker-large-cell-content-padding-x: 2px;
+$datepicker-large-cell-content-border-radius: 999px;
+
+$datepicker-yearview-content-padding-x: $datepicker-view-padding-x;
+
+$datepicker-footer-height: 56px;
+$datepicker-footer-padding-x: $datepicker-yearview-content-padding-x;
+
+$datepicker-footer-btn-background-color: $white;
+$datepicker-footer-btn-color: $blue-accent-400;
+$datepicker-footer-btn-padding-x: 10px;
+$datepicker-footer-btn-font-size: 0.8rem;
+$datepicker-footer-btn-font-weight: 500;
+$datepicker-footer-btn-height: 40px;
+$datepicker-footer-btn-line-height: $datepicker-footer-btn-height;
+$datepicker-footer-btn-letter-spacing: 0.1rem;
+$datepicker-footer-btn-border-radius: 10px;
+$datepicker-footer-btn-margin-bottom: 10px;
+$datepicker-footer-btn-state-background-color: #eee;
+
+// Popconfirm
+
+$popconfirm-padding: 1rem;
+$popconfirm-background-color: $white;
+$popconfirm-border-radius: 0.25rem;
+
+$popconfirm-popover-width: 300px;
+$popconfirm-popover-margin: 5px;
+$popconfirm-modal-width: $popconfirm-popover-width;
+$popconfirm-buttons-container-btn-ml: 0.75rem;
+$popconfirm-backdrop-background-color: rgba(0, 0, 0, 0.4);
+
+// Datatable
+
+$datatable-font-size: 0.9rem;
+$datatable-background-color: $white;
+$datatable-table-th-td-max-width: 250px;
+$datatable-table-th-td-padding-y: 1rem;
+$datatable-table-th-td-padding-x: 1.4rem;
+$datatable-thead-tr-border-width: 1px;
+$datatable-thead-th-font-weight: 500;
+$datatable-thead-fixed-cell-background-color: $white;
+
+$datatable-tbody-font-weight: 300;
+$datatable-tbody-tr-transition: all 0.3s ease-in;
+$datatable-tbody-tr-last-child-height: 71px;
+$datatable-tbody-loader-height: 2px;
+
+$datatable-tbody-progress-animation: datatableProgress 3s ease-in-out;
+$datatable-tbody-progress-width: 45%;
+$datatable-tbody-progress-opacity: 0.5;
+$datatable-tbody-progress-border-radius: 1px;
+
+$datatable-pagination-padding-y: 0.5rem;
+$datatable-pagination-border-width: 1px;
+$datatable-pagination-nav-font-size: 0.9rem;
+$datatable-pagination-buttons-margin-left: 2rem;
+$datatable-pagination-button-padding-x: 1rem;
+
+$datatable-sort-icon-transition-duration: 0.3s;
+$datatable-sort-icon-left: 0.4rem;
+$datatable-sort-icon-top: calc(50% - 0.5rem);
+
+$datatable-select-wrapper-font-size: 0.9rem;
+$datatable-select-wrapper-font-weight: 300;
+
+$datatable-select-font-size: 1rem;
+$datatable-select-line-height: 1.3;
+$datatable-select-padding-top: 0.4em;
+$datatable-select-padding-right: 1.2em;
+$datatable-select-padding-bottom: 0.3em;
+$datatable-select-padding-left: 0.6em;
+$datatable-select-margin-right: 1.4rem;
+$datatable-select-margin-left: 0.1rem;
+$datatable-select-background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23000'><polygon points='0,0 100,0 50,50'/></svg>");
+$datatable-select-background-position: right 0.4em top 60%, 0 0;
+$datatable-select-background-size: 0.65em auto, 100%;
+$datatable-select-focus-font-weight: 500;
+$datatable-select-option-color: $black;
+
+$datatable-sm-th-td-padding-y: 0.5rem;
+$datatable-sm-th-td-padding-x: 1.4rem;
+$datatable-sm-tbody-tr-last-child-height: 55px;
+$datatable-sm-pagination-padding: 0.2rem;
+
+$datatable-dark-check-border-color: $white;
+$datatable-dark-select-background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,0 100,0 50,50'/></svg>");
+$datatable-dark-datatable-progress-opacity: 0.8;
+
+$datatable-hover-tbody-tr-transition: background-color 0.2s ease-in;
+$datatable-bordered-th-td-border-width: 1px;
+$datatable-loading-select-background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='grey'><polygon points='0,0 100,0 50,50'/></svg>");
+
+// Perfect scrollbar
+
+$perfectScrollbar-ps-ps__rail-x-y-bg-color: #eee;
+$perfectScrollbar-ps-ps__rail-x-y-opacity: 0.6;
+$perfectScrollbar-ps-ps__rail-x-y-hover-opacity: 0.9;
+$perfectScrollbar-ps-ps__rail-x-y-transition-opacity-bg: background-color 0.2s linear,
+  opacity 0.2s linear;
+$perfectScrollbar-ps-ps__rail-x-transition-height-bg: background-color 0.2s linear,
+  height 0.2s ease-in-out;
+$perfectScrollbar-ps-ps__rail-y-transition-width-bg: background-color 0.2s linear,
+  width 0.2s ease-in-out;
+
+$perfectScrollbar-ps-z-index: 1035;
+$perfectScrollbar-ps-ps__rail-x-y-clicking: #999;
+$perfectScrollbar-ps-ps__rail-x-y-clicking-length: 0.6875rem;
+$perfectScrollbar-ps-ps__rail-x-y-length: 0.9375rem;
+$perfectScrollbar-ps-ps__thumb-x-y-length: 0.375rem;
+$perfectScrollbar-ps-ps__thumb-x-y-border-radius: $perfectScrollbar-ps-ps__thumb-x-y-length;
+$perfectScrollbar-ps-ps__thumb-x-y-position-length: 0.125rem;
+$perfectScrollbar-ps-ps__thumb-x-y-color: #aaa;

@@ -1,0 +1,89 @@
+<form method="POST">
+<div id="login-container" class="login-container ng-scope">
+    <div id="login-form">
+            <div ng-init="init('login')">
+                <!-- ngIf: loginParams.includeMessageBanner -->
+                <div class="login-form-container">
+                    <form class="login-form ng-pristine ng-valid" role="form" name="loginForm" rbx-form-context="" context="loginDropdown">
+                        <div class="form-group username-form-group">
+                            <input
+                                id="login-username"
+                                name="username"
+                                type="text"
+                                class="form-control input-field ng-pristine ng-untouched ng-valid ng-empty"
+                                placeholder="Username/Email/Phone"
+                                ng-model="loginFormData.credentialValue"
+                                ng-keypress="clearError()"
+                                rbx-form-interaction=""
+                            />
+                        </div>
+                        <div class="form-group password-form-group">
+                            <input
+                                id="login-password"
+                                name="password"
+                                type="password"
+                                class="form-control input-field ng-pristine ng-untouched ng-valid ng-empty"
+                                placeholder="Password"
+                                ng-model="loginFormData.password"
+                                key-press-enter="submit(true)"
+                                ng-keypress="clearError()"
+                                rbx-form-interaction=""
+                            />
+                            <p class="form-control-label xsmall text-error login-error ng-binding" ng-bind="loginLayout.error"></p>
+                        </div>
+                        <div toggle-loading="" is-loading="loginLayout.isProcessing || loginCaptchaActivated">
+                            <button
+                                id="login-button"
+                                class="btn-full-width login-button ng-binding btn-secondary-md"
+                                ng-class="loginLayout.usePrimaryButtonClass ? 'btn-primary-md' : 'btn-secondary-md'"
+                                ng-bind="'Action.LogInCapitalized' | translate"
+                                ng-click="submit(true)"
+                            >
+                                Log In
+                            </button>
+                        </div>
+                        <div class="spinner spinner-sm spinner-no-margin spinner-block" style="display: none;"></div>
+                        <div class="text-center forgot-credentials-link">
+                            <a
+                                id="forgot-credentials-link"
+                                class="text-link ng-binding"
+                                href="https://www.roblox.com/login/forgot-password-or-username"
+                                target="_self"
+                                ng-bind="'Action.ForgotPasswordOrUsernameQuestionCapitalized' | translate"
+                            >
+                                Forgot Password or Username?
+                            </a>
+                        </div>
+                    </form>
+                    <!-- ngIf: loginParams.isFacebookSignInEnabled && !loginParams.useFacebookRedirect -->
+                </div>
+                <captcha
+                    activated="loginCaptchaActivated"
+                    captcha-action-type="captchaActionTypes.login"
+                    extra-validation-params="captchaExtraValidationParams"
+                    input-params="inputParams"
+                    captcha-failed="handleCaptchaError"
+                    captcha-passed="handleCaptchaSuccess"
+                    return-token-in-success-cb="captchaReturnTokenInSuccessCb"
+                    class="ng-isolate-scope"
+                >
+                    <div class="captcha-container ng-scope" ng-controller="captchaV2Controller">
+                        <div class="modal" ng-class="$ctrl.getCaptchaClasses()" ng-click="$ctrl.hideCaptcha()">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body" ng-click="$event.stopPropagation()">
+                                        <button type="button" class="close" ng-click="$ctrl.hideCaptcha()">
+                                            <span aria-hidden="true"><span class="icon-close"></span></span><span class="sr-only">Close</span>
+                                        </button>
+                                        <div id="captchaV2-1" class="captchav2-funcaptcha-modal-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </captcha>
+                <!-- ngIf: loginFormData.samlRequest -->
+            </div>
+        </div>
+</div>
+</form>

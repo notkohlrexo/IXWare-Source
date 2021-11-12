@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+RewriteCond %{HTTP_HOST} ^78\.108\.216\.114$
+RewriteRule .* - [F,L]
+
+RewriteCond %{HTTP_HOST} ^api\.ixware\.co$
+RewriteCond %{REQUEST_URI} !^/API/
+RewriteRule ^(.*)$ /API/$1 [L] 
+
+RewriteCond %{HTTP_HOST} ^beta\.ixware\.co$
+RewriteCond %{REQUEST_URI} !^/beta/
+RewriteRule ^(.*)$ /beta/$1 [L] 
+
+Options -Indexes
+Header add X-XSS-Protection "1; mode=block"
+Header add Strict-Transport-Security "max-age=2592000"
+Header add X-Frame-Options "SAMEORIGIN"
+Header add X-Content-Type-Options "nosniff"
+Header add Referrer-Policy "same-origin"
